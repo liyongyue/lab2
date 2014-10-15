@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+<constant name="struts.devMode" value="true" />
+	<package name="default" extends="struts-default">
+	<action name="search" class="book.com.BookDAO">
+	<result name="sucess">
+	/searchresult.jsp
+	</result>
+        <result name="fail">
+	/return.jsp
+	</result>
+	</action>
+        <action name="delete" class="book.com.deleteaction">
+	<result name="sucess">
+	/deletesucess.jsp
+	</result>
+        <result name="fail">
+	/return.jsp
+	</result>
+	</action>
+        <action name="showdetail" class="book.com.showdetailaction">
+	<result name="sucess">
+	/detail.jsp
+	</result>
+        <result name="fail">
+	/return.jsp
+	</result>
+	</action>
+	</package>
+</struts>
